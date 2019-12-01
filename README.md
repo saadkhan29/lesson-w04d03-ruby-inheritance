@@ -9,7 +9,7 @@ By the end of this, developers should be able to:
 - Diagram the Ruby method lookup chain.
 - Write a class which inherits from another class.
 - Write a mixin.	
-- Desribe reasons why inheritance and Mixins are desirable.
+- Describe reasons why inheritance and Mixins are desirable.
 
 ## Ruby Inheritance
 
