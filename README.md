@@ -159,6 +159,31 @@ human.go_to_sleep # "nap time"
 
 In the code above, we defined a `module` called Sleepable. We also define a `Person` class and a `Computer` class. By using the keyword `include` followed by the name of the module (in this case `Sleepable`) we have access to the methods we defined in our module.  This is great because it allows us to keep our code *D-R-Y*, not to mention it allows us to be lazy developers (the good kind of lazy).
 
+
+```ruby
+# define module Sleeper
+module Sleepable
+    def go_to_sleep(name)
+      puts name + " nap time"
+    end
+  end
+  
+  # define Class Person
+  class Person
+    include Sleepable
+  end
+  
+  # define Class Computer
+  class Computer
+    include Sleepable
+  end
+  
+  dell = Computer.new
+  dell.go_to_sleep("hp") # "nap time"
+  
+  human = Person.new
+  human.go_to_sleep("abc") # "nap time"
+```
 ## Additional Resources
 
 - http://www.zenruby.info/2016/06/ruby-classes.html
