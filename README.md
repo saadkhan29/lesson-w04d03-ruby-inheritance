@@ -164,7 +164,7 @@ In the code above, we defined a `module` called Sleepable. We also define a `Per
 # define module Sleeper
 module Sleepable
     def go_to_sleep(name)
-      puts name + " nap time"
+      puts name + " wants power nap"
     end
   end
   
@@ -182,7 +182,7 @@ module Sleepable
   dell.go_to_sleep("hp") # "nap time"
   
   human = Person.new
-  human.go_to_sleep("abc") # "nap time"
+  human.go_to_sleep("saad") # "nap time"
 ```
 ## Additional Resources
 
