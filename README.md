@@ -149,7 +149,7 @@ module Sleepable
 ### Labs
 ------------
 
-### Lab: Drawing the Method Lookup Chain in Ruby
+### Lab: 1. Drawing the Method Lookup Chain in Ruby
 
 Please diagram the method lookup chain using the following requirements:
 
@@ -164,7 +164,9 @@ steve_harvey_family_feud.fast_money
 steve_harvey_family_feud.roll_credits
 ```
 
-### Lab: Model Shapes Using Classes
+------------
+
+### Lab: 2. Model Shapes Using Classes
 
 A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
 
@@ -189,6 +191,86 @@ area = num_sides * length * length / (4 * tangent(PI/num_sides))
 
 - Squares should be instantiated with `Square.new(4)` to create a square with all sides equal to 4.
 - Instances of Square should respond to the `#calculate_area` method and give the correct result.
+
+
+ ------------
+
+
+### Lab: 3. More on Inheritance
+
+1. Create a class called `Dessert` that has instance variables of `@name` and `@sugar_content`
+2. Give it an instance method of `eat` that puts `"Yum! This #{name} is sooooo delicious!"`
+3. Make two new classes called `Pie` and `DeepFriedDessert` that inherit from `Dessert`
+4. Give the `DeepFriedDessert` its own `eat` method that instead puts `"Yum! This #{name} is sooo...ack! ugh! *heart-attack*"`
+5. Make a new class `IceCream` that inherits from `Dessert` use `super` to get the instance variables of `@name` and `@sugar-content`. Also give `IceCream` its own unique instance variable of `@toppings`
+
+
+------------
+
+
+### Lab 4. The Universe
+
+#### Reps with Classes
+
+#### Universe Part One
+
+What's in a Class? A class can contain any number of variables and any number of methods. That is, any number of things and any number of actions. Therefore, let's make a Universe simulator! ;)
+
+1. Make a Class called `Universe`.
+
+2. Universe takes three parameters, `item1`, `item2`, `item3`: these are the three things within this universe we are making-- they could be anything: suns, galaxies, dust, people, lossless mp3s, justice,  temporal lobes, etc. Save these things into an array called `@items`.
+
+3. Give the initialize method an instance variable `@expanding = true`
+
+4. Give the initialize method an instance variable `@conservation = true`
+
+5. Give the initialize method an instance variable
+`@crunched = false`
+
+6. Make a method `see_all_things` that will print out all the items in this universe. Test it out.
+
+7. Make a method called `create` that takes a parameter `new_item` and will add the new item to the universe (in the `@items` array). If `@conservation = true` then one random item in the universe is *replaced* by the new thing. If not, then a new thing is added to the `@items` array.
+
+
+#### Universe Part Two
+
+8. While `@conservation` is true, run the `create` method to add a "mosquito" to your universe. Keep running it until all of the items in your universe are mosquitoes (they should be randomly replaced). You now have a mosquito universe. :(
+
+9. Time to make a parallel universe. Make a new instance of your universe called `parallel`, and put three new things into it.
+
+10. Make a method `check_density` that changes `expanding` to `false` if there are more than ten things in the universe (more than ten items in the `@items` array). This will mean that the universe is now contracting under its own gravity . . .  there's no stable universe in this scenario. We'll come back to this in a minute . . .
+
+11. Make a method called `energy_conservation` that changes `conservation` from `true` to `false` if all items in the `@items` array are identical. Hint: check out the `.uniq` method.
+
+
+
+#### Universe Part Three
+
+12. Make a method called `crunch?` wherein, if `expanding` equals `false`, goes through each item in the `@items` array, sets it to `nil` and prints a string saying the name of the item and that it has been crunched due to gravity. When the entire contents of the array are `nil`, set the array itself to `nil` and print "The Universe has ended." If the universe has ended, set `@crunched` to `true`
+
+13. Write your Universal Simulator that runs the following steps in a loop until the Universe has ended. The Universe has ended when `@crunched` is `true`. You might want to make `@crunched` available with `attr_accessor`. Start by making a new instance of the Universe.
+
+	* print the contents of `@items`
+	* add an item to `@items`
+	* check conservation
+	* check density
+	* crunch?
+
+Possible output:
+```
+spam
+github
+lava
+spam has been crunched due to gravity
+github has been crunched due to gravity
+lava has been crunched due to gravity
+radio waves has been crunched due to gravity
+The Universe has ended
+=> true
+
+```
+
+----------
 
 ## Additional Resources
 
