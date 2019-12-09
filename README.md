@@ -87,46 +87,6 @@ fish.move
 - Rename your `fly` method in your `SpaceShip` to `move` and use `super` so that it prints `Here we go Up up and away!`.
 - Rename your `drive` method in your `Car` to `move` and use `super` so that it prints `Here we go Vroom!`.
 
-### Lab: Drawing the Method Lookup Chain in Ruby
-
-Please diagram the method lookup chain using the following requirements:
-
-- Create a class `TVShow` that has an instance method called `roll_credits`.
-- Create a class `FamilyFeud` that inherits from the class `TVShow` and has an instance method called `fast_money`.
-- Diagram creating a new instance of the `FamilyFeud`
-- Diagram how Ruby finds and executes the methods called on  `FamilyFeud`
-
-```rb
-steve_harvey_family_feud = FamilyFeud.new
-steve_harvey_family_feud.fast_money
-steve_harvey_family_feud.roll_credits
-```
-
-### Lab: Model Shapes Using Classes
-
-A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
-
-#### Creating a 'Shape' Class
-
-Define a Shape class with the following:
-- `num_sides`: set during instantiation, read-only.
-- `side_length`: set during instantiation, readable and writable.
-- `color`: NOT set during instantiation, readable and writable.
-- `Shape.new(num_sides, side_length)` should create a shape.
-- `calculate_area` methodwhich calculates the area of a 'regular' shape (all sides equal) for the given side length. The mathematical formula for this is:
-```
-area = num_sides * length * length / (4 * tangent(PI/num_sides))
-```
-
-#### Creating a Rectangle Class
-
-- Rectangles should be instantiated with `Rectangle.new(3, 4)` to create a rectangle with a length of 3 and a width of 4.
-- Instances of Rectangle should respond to the `#calculate_area` method and give the correct result.
-
-#### Creating a Square Class
-
-- Squares should be instantiated with `Square.new(4)` to create a square with all sides equal to 4.
-- Instances of Square should respond to the `#calculate_area` method and give the correct result.
 
 ## Mixins
 
@@ -184,6 +144,52 @@ module Sleepable
   human = Person.new
   human.go_to_sleep("saad") # "nap time"
 ```
+
+-----------
+### Labs
+------------
+
+### Lab: Drawing the Method Lookup Chain in Ruby
+
+Please diagram the method lookup chain using the following requirements:
+
+- Create a class `TVShow` that has an instance method called `roll_credits`.
+- Create a class `FamilyFeud` that inherits from the class `TVShow` and has an instance method called `fast_money`.
+- Diagram creating a new instance of the `FamilyFeud`
+- Diagram how Ruby finds and executes the methods called on  `FamilyFeud`
+
+```rb
+steve_harvey_family_feud = FamilyFeud.new
+steve_harvey_family_feud.fast_money
+steve_harvey_family_feud.roll_credits
+```
+
+### Lab: Model Shapes Using Classes
+
+A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
+
+#### Creating a 'Shape' Class
+
+Define a Shape class with the following:
+- `num_sides`: set during instantiation, read-only.
+- `side_length`: set during instantiation, readable and writable.
+- `color`: NOT set during instantiation, readable and writable.
+- `Shape.new(num_sides, side_length)` should create a shape.
+- `calculate_area` methodwhich calculates the area of a 'regular' shape (all sides equal) for the given side length. The mathematical formula for this is:
+```
+area = num_sides * length * length / (4 * tangent(PI/num_sides))
+```
+
+#### Creating a Rectangle Class
+
+- Rectangles should be instantiated with `Rectangle.new(3, 4)` to create a rectangle with a length of 3 and a width of 4.
+- Instances of Rectangle should respond to the `#calculate_area` method and give the correct result.
+
+#### Creating a Square Class
+
+- Squares should be instantiated with `Square.new(4)` to create a square with all sides equal to 4.
+- Instances of Square should respond to the `#calculate_area` method and give the correct result.
+
 ## Additional Resources
 
 - http://www.zenruby.info/2016/06/ruby-classes.html
